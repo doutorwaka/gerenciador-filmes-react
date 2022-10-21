@@ -1,8 +1,11 @@
+import { Topbar } from "./components/topbar";
+
+
 function App() {
   return (
-    <div className="App">
-      Olá react!
-    </div>
+    <>
+      <Topbar/>
+    </>
   );
 }
 
