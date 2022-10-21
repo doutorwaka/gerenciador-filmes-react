@@ -1,0 +1,16 @@
+h1.home{
+    font-size: 38px;
+    color: #707070;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+div.home{
+    background-color: #EFEFEF;
+    min-height: 600px;
+}
+
+div.home-content{
+    padding: 10px;
+}
