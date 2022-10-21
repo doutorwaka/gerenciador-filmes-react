@@ -1,9 +1,9 @@
 import "./style.css";
 
-export function Home (){
+export function Films (){
     return (
         <div className="content">
-            <h1>HOME</h1>
+            <h1>FILMES</h1>
             <div> CONTEUDO </div>
         </div>
     );

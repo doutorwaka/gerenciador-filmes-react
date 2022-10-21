@@ -3,3 +3,15 @@
 *{
     font-family: Roboto;
 }
+
+h1{
+    font-size: 38px;
+}
+
+.content{
+    background-color: #EFEFEF;
+    color: #707070;
+    margin-top: 0px;
+    padding: 10px;
+    min-height: 580px;
+}

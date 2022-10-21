@@ -4,6 +4,9 @@ import { Menu } from "./components/menu";
 import { Topbanner } from "./components/topbanner";
 import { Topbar } from "./components/topbar";
 import "./global.css";
+import { Actors } from "./pages/actors";
+import { Directors } from "./pages/directors";
+import { Films } from "./pages/films";
 import { Home } from "./pages/home";
 
 function App() {
@@ -13,7 +16,7 @@ function App() {
       <Topbanner/>
       <Mainbody>
         <Menu/>
-        <Home/>
+        <Directors/>
       </Mainbody>
       <Footer/>
     </>
