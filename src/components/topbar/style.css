@@ -1,0 +1,16 @@
+div.topbar{
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 60px;
+    background-color: #707070;
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+}
+
+a.topbar{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
