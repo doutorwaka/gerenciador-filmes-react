@@ -1,12 +1,15 @@
 import "./style.css";
 
-export function Filmcard(){
+export function Filmcard(props){
+
+    console.log(props);
+
     return (
         <div className="filmcard">
-            <h2>FILME</h2>
-            <div>Diretor</div>
-            <div>Elenco</div>
-            <div>Nota</div>
+            <h2>{props.title}</h2>
+            <div>{props.director}</div>
+            <div>{props.cast}</div>
+            <div>{props.grade}</div>
         </div>
     );
 }

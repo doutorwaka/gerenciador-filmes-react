@@ -27,14 +27,12 @@ export function Directors(){
     useEffect(function(){
         axios.get(BACKEND_URL + "/diretores")
         .then(function (response){
-            console.log("RODADNO... ");
             setDirectors(directorsHandler(response.data));
         })
         .catch(function(error){
             console.log("Error: " + error);
         })
         .finally(function(){
-            console.log("Finally.");
         });
     }, []);
 

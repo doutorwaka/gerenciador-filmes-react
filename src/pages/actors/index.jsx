@@ -27,14 +27,12 @@ export function Actors(){
     useEffect(function(){
         axios.get(BACKEND_URL + "/atores")
         .then(function (response){
-            console.log("RODADNO... ");
             setActors(actorsHandler(response.data));
         })
         .catch(function(error){
             console.log("Error: " + error);
         })
         .finally(function(){
-            console.log("Finally.");
         });
     }, []);
 

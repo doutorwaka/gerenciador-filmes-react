@@ -13,8 +13,19 @@ function filmsHandler(films){
     var i  = 0;
 
     var content = films.map(function(film){
+        console.log(film);
+
+        var elenco = film.elenco.map(function(actor){
+            return actor.nome + ", ";
+        })
+
         return(
-            <Filmcard key={i++} />
+            <Filmcard key={i++} 
+            title={film.nome}  
+            director={film.diretor.nome}
+            cast={elenco}
+            grade={film.nota}
+            />
         );
     });
 
@@ -28,14 +39,12 @@ export function Films (){
     useEffect(function(){
         axios.get(BACKEND_URL + "/filmes")
         .then(function (response){
-            console.log("RODADNO... ");
             setFilms(filmsHandler(response.data));
         })
         .catch(function(error){
             console.log("Error: " + error);
         })
         .finally(function(){
-            console.log("Finally.");
         });
     }, []);
 
