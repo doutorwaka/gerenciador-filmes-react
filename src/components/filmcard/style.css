@@ -9,25 +9,4 @@ div.filmcard{
     padding: 10px;
     padding-bottom: 20px;
     width: 300px;
-<<<<<<< HEAD
-}
-
-h2.filmcard{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-}
-
-div.filmcard-content{
-    display: flex;
-    justify-content: space-between;
-}
-
-div.filmcard-grade{
-    font-size: 45px;
-    font-weight: bold;
-    color: #4EBC30;
-=======
->>>>>>> parent of 4c8b122 (Estilizacao final do filmcard)
 }
