@@ -2,6 +2,7 @@ import "./style.css";
 import axios from "axios";
 import {useState, useEffect} from "react";
 import { BACKEND_URL } from "../../config";
+import { Filmcard } from "../../components/filmcard";
 
 function filmsHandler(films){
     
@@ -13,7 +14,7 @@ function filmsHandler(films){
 
     var content = films.map(function(film){
         return(
-            <div className="film-content" key={i++}>{i+1} - {film.nome}</div>
+            <Filmcard key={i++} />
         );
     });
 
@@ -41,7 +42,9 @@ export function Films (){
     return (
         <div className="content">
             <h1>FILMES</h1>
+            <div>
             {films}
+            </div>
         </div>
     );
 }
