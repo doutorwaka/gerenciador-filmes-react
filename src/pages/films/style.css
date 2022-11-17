@@ -4,3 +4,12 @@ div.film-content{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+div.cards{
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 1337px;
+    justify-content: space-between;
+    place-content: initial;
+}
