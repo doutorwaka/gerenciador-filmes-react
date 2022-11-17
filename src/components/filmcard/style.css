@@ -17,3 +17,14 @@ h2.filmcard{
     text-overflow: ellipsis;
     text-transform: uppercase;
 }
+
+div.filmcard-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.filmcard-grade{
+    font-size: 45px;
+    font-weight: bold;
+    color: #4EBC30;
+}
