@@ -10,3 +10,10 @@ div.filmcard{
     padding-bottom: 20px;
     width: 300px;
 }
+
+h2.filmcard{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
