@@ -1,0 +1,22 @@
+div.home-form{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+h3.home-form{
+    font-size: 16px;
+}
+
+p.home-form{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input.home-form{
+    padding: 5px;
+    color: #707070;
+    font-size: 14px;
+    border-color: #707070;
+    border-width: 1px;
+}
