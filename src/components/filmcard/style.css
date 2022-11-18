@@ -10,3 +10,22 @@ div.filmcard{
     padding-bottom: 20px;
     width: 300px;
 }
+
+div.filmcard-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.filmcard-grade{
+    font-size: 45px;
+    font-weight: bold;
+    color: #4EBC30;
+    margin: 5px;
+}
+
+h2.filmcard{
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
