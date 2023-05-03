@@ -27,19 +27,29 @@ function createCastInputs(castSize, setCastSize) {
     return content;
 }
 
-function formHandle(e){
+function formDataToJsonMapper(film, director, actors, grade) {
+    let formatedData = {
+        nome: film,
+        diretor: { nome: director },
+        elenco: actors.map(actor => {
+            return { nome: actor }
+        }),
+        nota: grade
+    };
+
+    return JSON.stringify(formatedData);
+}
+
+function formHandle(e) {
     e.preventDefault();
-    
+
     const film = e.target.film.value;
     const director = e.target.director.value;
     const grade = e.target.grade.value;
-    
-    const actors = Array.from(e.target.actor).map(actor=>actor.value);
 
-    console.log(film);
-    console.log(director);
-    console.log(grade);
-    console.log(actors);
+    const actors = Array.from(e.target.actor).map(actor => actor.value);
+
+    console.log(formDataToJsonMapper(film, director, actors, grade));
 
 }
 
@@ -52,7 +62,7 @@ export function Home() {
             <h1>HOME</h1>
             mensagem vai aqui
             <div className="home-form">
-                <form onSubmit={function(e){formHandle(e)}}>
+                <form onSubmit={function (e) { formHandle(e) }}>
                     <h3 className="home-form">Inserir novo filme:</h3>
                     <p className="home-form"><input type="text" className="home-form" size={40} name="film" placeholder="Nome do filme" /></p>
                     <p className="home-form"><input type="text" className="home-form" size={40} name="director" placeholder="Diretor" /></p>

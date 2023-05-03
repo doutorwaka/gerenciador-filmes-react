@@ -1,0 +1,15 @@
+{
+    "nome": "Todo Poderoso",
+    "diretor": {
+        "nome": "Tom Shadyac"
+    },
+    "elenco": [
+        {
+            "nome": "Jim Carrey"
+        },
+        {
+            "nome": "Morgan Freeman"
+        }
+    ],
+    "nota": 6.5
+}
