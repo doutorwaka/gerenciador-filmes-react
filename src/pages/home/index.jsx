@@ -16,7 +16,7 @@ function createCastInputs(castSize, setCastSize) {
         content.push(
             (
                 <p className="home-form" key={i}>
-                    <input type="text" className="home-form" size={40} placeholder="Nome do ator" />
+                    <input type="text" className="home-form" size={40} name="actor" placeholder="Nome do ator" />
                     <MinusIcon size={25} className="home-form-icon" onClick={() => decreaseCastSize(castSize, setCastSize)} />
                     <PlusIcon size={25} className="home-form-icon" onClick={() => setCastSize(castSize + 1)} />
                 </p>
@@ -25,6 +25,22 @@ function createCastInputs(castSize, setCastSize) {
     }
 
     return content;
+}
+
+function formHandle(e){
+    e.preventDefault();
+    
+    const film = e.target.film.value;
+    const director = e.target.director.value;
+    const grade = e.target.grade.value;
+    
+    const actors = Array.from(e.target.actor).map(actor=>actor.value);
+
+    console.log(film);
+    console.log(director);
+    console.log(grade);
+    console.log(actors);
+
 }
 
 export function Home() {
@@ -36,16 +52,18 @@ export function Home() {
             <h1>HOME</h1>
             mensagem vai aqui
             <div className="home-form">
-                <h3 className="home-form">Inserir novo filme:</h3>
-                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Nome do filme" /></p>
-                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Diretor" /></p>
-                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Nota" /></p>
+                <form onSubmit={function(e){formHandle(e)}}>
+                    <h3 className="home-form">Inserir novo filme:</h3>
+                    <p className="home-form"><input type="text" className="home-form" size={40} name="film" placeholder="Nome do filme" /></p>
+                    <p className="home-form"><input type="text" className="home-form" size={40} name="director" placeholder="Diretor" /></p>
+                    <p className="home-form"><input type="text" className="home-form" size={40} name="grade" placeholder="Nota" /></p>
 
-                <h3 className="home-form">Elenco:</h3>
+                    <h3 className="home-form">Elenco:</h3>
 
-                {createCastInputs(castSize, setCastSize)}
+                    {createCastInputs(castSize, setCastSize)}
 
-                <p className="home-form"><input type="submit" className="home-form-button" value="Cadastrar novo filme" /></p>
+                    <p className="home-form"><input type="submit" className="home-form-button" value="Cadastrar novo filme" /></p>
+                </form>
             </div>
         </div>
     );
