@@ -27,6 +27,9 @@ export function Directors(){
     useEffect(function(){
         axios.get(BACKEND_URL + "/diretores")
         .then(function (response){
+            if(response.data == "")
+                return;
+                
             setDirectors(directorsHandler(response.data));
         })
         .catch(function(error){

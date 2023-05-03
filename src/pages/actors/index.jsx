@@ -27,6 +27,9 @@ export function Actors(){
     useEffect(function(){
         axios.get(BACKEND_URL + "/atores")
         .then(function (response){
+            if(response.data == "")
+                return;
+                
             setActors(actorsHandler(response.data));
         })
         .catch(function(error){

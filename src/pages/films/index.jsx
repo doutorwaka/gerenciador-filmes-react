@@ -39,6 +39,9 @@ export function Films (){
     useEffect(function(){
         axios.get(BACKEND_URL + "/filmes")
         .then(function (response){
+            if(response.data == "")
+                return;
+                
             setFilms(filmsHandler(response.data));
         })
         .catch(function(error){

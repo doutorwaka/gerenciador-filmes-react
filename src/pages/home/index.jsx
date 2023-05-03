@@ -3,6 +3,7 @@ import { BsFileMinusFill as MinusIcon } from "react-icons/bs";
 import { useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from "../../config";
+import { Message, MESSAGE_TYPE } from "../../components/message";
 import "./style.css";
 
 function decreaseCastSize(castSize, setCastSize) {
@@ -57,10 +58,18 @@ async function formHandle(event, setMessage) {
 
     try {
         await axios.post(BACKEND_URL + "/filmes", jsonData, axiosConfig);
-        setMessage("O filme " + film + " foi cadastrado com sucesso!");
+
+        const title = "Cadastro com sucesso!";
+        const message = film + " foi cadastrado com sucesso!";
+
+        setMessage(<Message title={title} message={message} type={MESSAGE_TYPE.SUCCESS}/>);
     }
     catch (error) {
-        setMessage("Erro ao cadastrar o filme " + film + ": " + error.message);
+
+        const title = "Erro no cadastro!";
+        const message = error.message;
+
+        setMessage(<Message title={title} message={message} type={MESSAGE_TYPE.ERROR}/>);
     }
 }
 
