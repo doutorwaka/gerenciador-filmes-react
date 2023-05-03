@@ -15,10 +15,10 @@ function createCastInputs(castSize, setCastSize) {
     for (var i = 0; i < castSize; i++) {
         content.push(
             (
-                <p className="home-form">
-                    <div><input type="text" className="home-form" size={40} placeholder="Nome do ator" /></div>
-                    <div><MinusIcon size={25} className="home-form-icon" onClick={() => decreaseCastSize(castSize, setCastSize)} /></div>
-                    <div><PlusIcon size={25} className="home-form-icon" onClick={() => setCastSize(castSize + 1)} /></div>
+                <p className="home-form" key={i}>
+                    <input type="text" className="home-form" size={40} placeholder="Nome do ator" />
+                    <MinusIcon size={25} className="home-form-icon" onClick={() => decreaseCastSize(castSize, setCastSize)} />
+                    <PlusIcon size={25} className="home-form-icon" onClick={() => setCastSize(castSize + 1)} />
                 </p>
             )
         );
