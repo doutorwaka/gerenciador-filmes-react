@@ -14,7 +14,7 @@ p.home-form{
     display: flex;
 }
 
-input{
+input.home-form{
     padding: 5px;
     color: #707070;
     font-size: 14px;

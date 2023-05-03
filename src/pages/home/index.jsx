@@ -16,7 +16,7 @@ function createCastInputs(castSize, setCastSize) {
         content.push(
             (
                 <p className="home-form" key={i}>
-                    <input type="text" className="actor" size={40} placeholder="Nome do ator" />
+                    <input type="text" className="home-form" size={40} placeholder="Nome do ator" />
                     <MinusIcon size={25} className="home-form-icon" onClick={() => decreaseCastSize(castSize, setCastSize)} />
                     <PlusIcon size={25} className="home-form-icon" onClick={() => setCastSize(castSize + 1)} />
                 </p>
@@ -36,18 +36,16 @@ export function Home() {
             <h1>HOME</h1>
             mensagem vai aqui
             <div className="home-form">
-                <form onSubmit={function(e){e.preventDefault(); console.log(e)}}>
-                    <h3 className="home-form">Inserir novo filme:</h3>
-                    <p className="home-form"><input type="text" className="name" size={40} placeholder="Nome do filme" /></p>
-                    <p className="home-form"><input type="text" className="director" size={40} placeholder="Diretor" /></p>
-                    <p className="home-form"><input type="text" className="grade" size={40} placeholder="Nota" /></p>
+                <h3 className="home-form">Inserir novo filme:</h3>
+                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Nome do filme" /></p>
+                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Diretor" /></p>
+                <p className="home-form"><input type="text" className="home-form" size={40} placeholder="Nota" /></p>
 
-                    <h3 className="home-form">Elenco:</h3>
+                <h3 className="home-form">Elenco:</h3>
 
-                    {createCastInputs(castSize, setCastSize)}
+                {createCastInputs(castSize, setCastSize)}
 
-                    <p className="home-form"><input type="submit" className="home-form-button" value="Cadastrar novo filme" /></p>
-                </form>
+                <p className="home-form"><input type="submit" className="home-form-button" value="Cadastrar novo filme" /></p>
             </div>
         </div>
     );
