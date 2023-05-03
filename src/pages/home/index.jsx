@@ -44,6 +44,8 @@ export function Home() {
                 <h3 className="home-form">Elenco:</h3>
 
                 {createCastInputs(castSize, setCastSize)}
+
+                <p className="home-form"><input type="submit" className="home-form-button" value="Cadastrar novo filme" /></p>
             </div>
         </div>
     );
